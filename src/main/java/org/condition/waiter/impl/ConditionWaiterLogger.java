@@ -1,21 +1,21 @@
-package org.action.waiter.impl;
+package org.condition.waiter.impl;
 
-import org.action.waiter.Result;
-import org.action.waiter.Waiter;
-import org.action.waiter.matcher.ConditionMatcher;
+import org.condition.waiter.Result;
+import org.condition.waiter.Waiter;
+import org.condition.waiter.matcher.ConditionMatcher;
 import org.apache.log4j.Logger;
 
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
 
-import static org.action.waiter.Status.SUCCESS;
+import static org.condition.waiter.Status.SUCCESS;
 
 /**
  * ConditionWaiter decorator class with logging functionality
  */
 public final class ConditionWaiterLogger<T> extends ConditionWaiter<T> {
 
-    private static final Logger LOGGER = Logger.getLogger(ConditionWaiter.class.getSimpleName());
+    private static final Logger LOGGER = Logger.getLogger(Waiter.class.getSimpleName());
     private static final String PERFORM_MESSAGE = "PERFORMING ACTION: %s";
 
     private final ConditionWaiter<T> conditionWaiter;

@@ -1,12 +1,12 @@
-import org.action.waiter.Result;
-import org.action.waiter.Status;
+package org.condition.waiter;
+
 import org.junit.Test;
 
 import java.util.function.Supplier;
 
-import static org.action.waiter.impl.ConditionWaiter.perform;
-import static org.action.waiter.matcher.Matchers.isEqualTo;
-import static org.action.waiter.matcher.Matchers.isNotEqualTo;
+import static org.condition.waiter.impl.ConditionWaiter.perform;
+import static org.condition.waiter.matcher.Matchers.isEqualTo;
+import static org.condition.waiter.matcher.Matchers.isNotEqualTo;
 
 public class ConditionWaiterTest {
 

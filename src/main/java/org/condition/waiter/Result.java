@@ -1,7 +1,7 @@
-package org.action.waiter;
+package org.condition.waiter;
 
 /**
- * org.action.waiter.Result class returned by the ConditionWaiter
+ * org.condition.waiter.Result class returned by the ConditionWaiter
  */
 public class Result<T> {
 

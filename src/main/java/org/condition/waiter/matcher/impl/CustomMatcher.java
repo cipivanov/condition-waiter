@@ -1,6 +1,6 @@
-package org.action.waiter.matcher.impl;
+package org.condition.waiter.matcher.impl;
 
-import org.action.waiter.matcher.ConditionMatcher;
+import org.condition.waiter.matcher.ConditionMatcher;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.function.BiPredicate;

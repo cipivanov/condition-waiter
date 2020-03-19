@@ -1,8 +1,8 @@
-package org.action.waiter.matcher;
+package org.condition.waiter.matcher;
 
-import org.action.waiter.matcher.impl.Contains;
-import org.action.waiter.matcher.impl.IsEqualTo;
-import org.action.waiter.matcher.impl.IsNotEqualTo;
+import org.condition.waiter.matcher.impl.Contains;
+import org.condition.waiter.matcher.impl.IsEqualTo;
+import org.condition.waiter.matcher.impl.IsNotEqualTo;
 
 /**
  * Aggregates the implemented ConditionMatchers

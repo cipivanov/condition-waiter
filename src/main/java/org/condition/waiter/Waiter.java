@@ -1,12 +1,12 @@
-package org.action.waiter;
+package org.condition.waiter;
 
-import org.action.waiter.matcher.ConditionMatcher;
+import org.condition.waiter.matcher.ConditionMatcher;
 
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
 
 /**
- * Evaluates an action (supplier) against a condition (predicate)
+ * Evaluates an condition (supplier) against a condition (predicate)
  */
 public interface Waiter<T> {
 
@@ -33,7 +33,7 @@ public interface Waiter<T> {
      *
      * @param timeout amount of time units to wait for
      * @param unit    time unit to wait for e.g. SECONDS, MINUTES etc.
-     * @return calling org.action.waiter.Waiter object with overwritten timeout
+     * @return calling org.condition.waiter.Waiter object with overwritten timeout
      */
     Waiter<T> atMost(final long timeout, final TimeUnit unit);
 
@@ -42,7 +42,7 @@ public interface Waiter<T> {
      *
      * @param pollDelay amount of time units to wait for
      * @param unit      time unit to wait for e.g. SECONDS, MINUTES etc.
-     * @return calling org.action.waiter.Waiter object with overwritten poll delay
+     * @return calling org.condition.waiter.Waiter object with overwritten poll delay
      */
     Waiter<T> withPollDelay(final long pollDelay, final TimeUnit unit);
 }

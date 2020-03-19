@@ -1,6 +1,6 @@
-package org.action.waiter.matcher.impl;
+package org.condition.waiter.matcher.impl;
 
-import org.action.waiter.matcher.ConditionMatcher;
+import org.condition.waiter.matcher.ConditionMatcher;
 
 public class IsNotEqualTo<T> extends ConditionMatcher<T> {
 

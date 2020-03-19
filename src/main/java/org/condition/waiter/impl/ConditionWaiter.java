@@ -1,10 +1,10 @@
-package org.action.waiter.impl;
+package org.condition.waiter.impl;
 
-import org.action.waiter.Result;
-import org.action.waiter.Status;
-import org.action.waiter.Waiter;
-import org.action.waiter.matcher.ConditionMatcher;
-import org.action.waiter.matcher.impl.CustomMatcher;
+import org.condition.waiter.Result;
+import org.condition.waiter.Status;
+import org.condition.waiter.Waiter;
+import org.condition.waiter.matcher.ConditionMatcher;
+import org.condition.waiter.matcher.impl.CustomMatcher;
 import org.awaitility.Duration;
 import org.awaitility.core.ConditionFactory;
 import org.awaitility.core.ConditionTimeoutException;
@@ -14,12 +14,12 @@ import java.util.function.BiPredicate;
 import java.util.function.Supplier;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
-import static org.action.waiter.Status.FAILURE;
-import static org.action.waiter.Status.SUCCESS;
+import static org.condition.waiter.Status.FAILURE;
+import static org.condition.waiter.Status.SUCCESS;
 import static org.awaitility.Awaitility.await;
 
 /**
- * Implements the org.action.waiter.Waiter interface to evaluate an action (supplier) against a condition (predicate)
+ * Implements the org.condition.waiter.Waiter interface to evaluate an condition (supplier) against a condition (predicate)
  */
 public class ConditionWaiter<T> implements Waiter<T> {
 
@@ -37,8 +37,8 @@ public class ConditionWaiter<T> implements Waiter<T> {
     /**
      * Triggers the condition wait and returns it's result
      *
-     * @param action            action that will be repeatedly executed while evaluating the condition
-     * @param actionDescription string representation of the action being provided. For logging readability purposes.
+     * @param action            condition that will be repeatedly executed while evaluating the condition
+     * @param actionDescription string representation of the condition being provided. For logging readability purposes.
      * @return condition wait result
      */
     public static <T> Waiter<T> perform(final Supplier<T> action, final String actionDescription) {

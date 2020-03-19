@@ -1,4 +1,4 @@
-package org.action.waiter.matcher;
+package org.condition.waiter.matcher;
 
 import java.util.function.BiPredicate;
 
